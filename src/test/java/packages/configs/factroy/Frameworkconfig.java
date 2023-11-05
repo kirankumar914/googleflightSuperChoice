@@ -10,7 +10,7 @@ import packages.enums.RunModeTye;
 @Config.Sources({
         "system:properties",
         "system:env",
-        "classpath.config.properties"
+        "classpath:config.properties"
 })
 public interface Frameworkconfig extends Config {
 

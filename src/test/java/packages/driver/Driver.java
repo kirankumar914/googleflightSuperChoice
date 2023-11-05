@@ -12,6 +12,7 @@ public class Driver {
     public static void initDriver()
     {
         driver= ChromeManager.getDriver();
+        driver=LocalDriverFactory.getDriver(ConfigFactory.getConfig().browser());
         driver.get("https://demo.guru99.com/insurance/v1/index.php");
         driver.manage().window().maximize();
     }

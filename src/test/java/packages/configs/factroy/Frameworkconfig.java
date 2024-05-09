@@ -10,7 +10,7 @@ import packages.enums.RunModeTye;
 @Config.Sources({
         "system:properties",
         "system:env",
-        "classpath:config.properties"
+        "classpath:testData\\config.properties"
 })
 public interface Frameworkconfig extends Config {
 
@@ -21,9 +21,11 @@ public interface Frameworkconfig extends Config {
     @ConverterClass(StringToRunModeTypeConverter.class)
     RunModeTye runmode();
     String environment();
-    @Key("${environment}.url")
+    @Key("${environment}.applicationURL")
     String applicationURL();
     @Key("${environment}.resgistrationPageURL")
     String resgistrationPageURL();
+
+    long webDriverWait();
 
 }

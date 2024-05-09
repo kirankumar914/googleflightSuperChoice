@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features",
         glue = {"packages.stepDefinations","packages.runnerAndHooks"},
-        tags = "@logOut"
+        tags = "@HomePage"
 )
 public class RunnerTest {
 
